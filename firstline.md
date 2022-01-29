@@ -1,1 +1,1 @@
-![Image](google.com)
+[Link](https://www.google.com)
