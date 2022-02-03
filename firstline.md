@@ -1,1 +1,1 @@
-[Link](https://www.google.com)
+[Link](https://help.com)

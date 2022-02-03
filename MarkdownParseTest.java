@@ -17,7 +17,7 @@ public class MarkdownParseTest {
 
     @Test
     public void firstTest() throws IOException{
-        Path fileName = Path.of("test-file.md");
+        Path fileName = Path.of("C:/Users/Azaka/Documents/GitHub/markdown-parse/test-file.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         assertEquals(List.of("https://something.com", "some-page.html"),links);
@@ -25,7 +25,7 @@ public class MarkdownParseTest {
 
     @Test
     public void secondTest() throws IOException{
-        Path fileName = Path.of("new-file.md");
+        Path fileName = Path.of("C:/Users/Azaka/Documents/GitHub/markdown-parse/new-file.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         assertEquals(List.of("https://kathyychenn.github.io/cse15l-lab-reports/lab-report-1-week-2.html"),links);
@@ -33,7 +33,7 @@ public class MarkdownParseTest {
     
     @Test
     public void thirdTest() throws IOException{
-        Path fileName = Path.of("firstline.md");
+        Path fileName = Path.of("C:/Users/Azaka/Documents/GitHub/markdown-parse/firstline.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         assertEquals(List.of("https://help.com"),links);
@@ -41,7 +41,7 @@ public class MarkdownParseTest {
 
     @Test
     public void fourthTest() throws IOException{
-        Path fileName = Path.of("no-paren.md");
+        Path fileName = Path.of("C:/Users/Azaka/Documents/GitHub/markdown-parse/no-paren.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         assertEquals(List.of(),links);
