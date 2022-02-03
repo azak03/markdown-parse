@@ -36,7 +36,7 @@ public class MarkdownParseTest {
         Path fileName = Path.of("firstline.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
-        assertEquals(List.of("https://help.com"),links);
+        assertEquals(List.of("https://help.com FAIL"),links);
     }
 
     @Test
