@@ -17,31 +17,23 @@ public class MarkdownParseTest {
 
     @Test
     public void firstTest() throws IOException{
-        Path fileName = Path.of("test-file.md");
+        Path fileName = Path.of("C:\\Users\\Azaka\\Downloads\\Snippet1.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
-        assertEquals(List.of("https://something.com", "some-page.html"),links);
+        assertEquals(List.of(),links);
     }
 
     @Test
     public void secondTest() throws IOException{
-        Path fileName = Path.of("new-file.md");
+        Path fileName = Path.of("C:\\Users\\Azaka\\Downloads\\Snippet2.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
-        assertEquals(List.of("https://kathyychenn.github.io/cse15l-lab-reports/lab-report-1-week-2.html"),links);
+        assertEquals(List.of(),links);
     }
     
     @Test
     public void thirdTest() throws IOException{
-        Path fileName = Path.of("firstline.md");
-	    String contents = Files.readString(fileName);
-        ArrayList<String> links = MarkdownParse.getLinks(contents);
-        assertEquals(List.of("https://help.com FAIL"),links);
-    }
-
-    @Test
-    public void fourthTest() throws IOException{
-        Path fileName = Path.of("no-paren.md");
+        Path fileName = Path.of("C:\\Users\\Azaka\\Downloads\\Snippet3.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         assertEquals(List.of(),links);
